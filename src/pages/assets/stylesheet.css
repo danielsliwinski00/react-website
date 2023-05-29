@@ -1,0 +1,192 @@
+.body {
+    background-color: #121212;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.backButton {
+    padding: 10px;
+    border-radius: 15px;
+    border-width: 5px;
+    border-color: black;
+    background-color: grey;
+    font-size: calc(10px + 1vmin);
+    color: white;
+    width: 120px;
+}
+
+.backButton:hover {
+    background-color: white;
+    transform: scale(1.05);
+    color: black;
+}
+
+.or {
+    padding: 15px;
+    align-self: center;
+}
+
+label {
+    font-size: 25px;
+}
+
+.formOptions {
+    display: flex;
+    flex-direction: row;
+}
+
+.path {
+    flex: 1;
+}
+
+.element {
+    flex: 1;
+    padding-left: 3%;
+}
+
+.form {
+    flex-direction: column;
+    width: 80%;
+}
+
+.nameInput {
+    margin-left: 5%;
+    width: 40%;
+    font-size: 25px;
+    height: 25px;
+}
+
+.submitButton {
+    align-self: center;
+    width: fit-content;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.submitButton:hover {
+    align-self: center;
+    width: fit-content;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: gray;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.submitButtonDiv {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.charName {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.helloworld {
+    color: yellow;
+    font-weight: 1000;
+    font-size: 200px;
+}
+
+.characterTable {
+    margin-top: calc(60px + 2vmin);
+    background-color: #121212;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    padding-left: 15px;
+    width: 80%;
+}
+
+td {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 250;
+}
+
+th {
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 450;
+}
+
+th.Name {
+    width: 40%;
+}
+
+th.Path {
+    width: 30%;
+}
+
+th.Element {
+    width: 25%;
+}
+
+tbody tr{
+    background-color: #1e1e1e;
+    color: white;
+    border: solid thin round #121212;
+}
+
+tbody tr:hover {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+.navigation {
+    overflow: hidden;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation a {
+    align-self: center;
+    flex: 1;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: calc(10px + 2vmin);
+}
+
+.navigation a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.currentWebsite{
+    background-color: #121212;
+    align-self: center;
+    flex: 1;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: calc(10px + 2vmin);
+}
+
+.currentWebsite :hover {
+    background: #ddd;
+    color: black;
+}
