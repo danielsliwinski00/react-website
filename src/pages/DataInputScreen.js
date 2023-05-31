@@ -7,6 +7,7 @@ function DataInput() {
   const [name, setName] = useState('');
   const [path, setPath] = useState('Destruction');
   const [element, setElement] = useState('Physical');
+  const [picture, setPicture] = useState();
 
   var data = {
     'name': name,
@@ -27,8 +28,9 @@ function DataInput() {
         }),
       })
       .then((response) => {
-        console.log('here')
-        console.log(response)
+        if (response.status === 400) {
+          console.log('bad')
+        }
       })
       .catch((error) => {
         console.log('here')
@@ -203,15 +205,17 @@ function DataInputScreen() {
       <header className="header">
       </header>
       <div className="body">
-      <div className="navigation">
+        <div className="navigation">
           <a onClick={() => { navigate('/home') }}>Home</a>
-          <a className='currentWebsite' onClick={() => { navigate('/input') }}>Input</a>
           <a onClick={() => { navigate('/characters') }}>Characters</a>
         </div>
-        {DataInput()}
+        <div className='dataInputForm'>
+          {DataInput()}
+        </div>
       </div>
     </div>
   );
 }
 
 export default DataInputScreen;
+//          <a className='currentWebsite' onClick={() => { navigate('/input') }}>Input</a>

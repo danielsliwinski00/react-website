@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
 }
@@ -24,6 +23,10 @@
     background-color: white;
     transform: scale(1.05);
     color: black;
+}
+
+.dataInputForm {
+    margin-top: calc(80px + 2vmin);
 }
 
 .or {
@@ -61,6 +64,12 @@ label {
     height: 25px;
 }
 
+.homeButtons {
+    margin-top: calc(100vh/3);
+    display: flex;
+    flex-direction: column;
+}
+
 .submitButton {
     align-self: center;
     width: fit-content;
@@ -69,7 +78,7 @@ label {
     border-width: 2px;
     background-color: white;
     color: black;
-    font-size: 25px;
+    font-size: calc(10px + 2vmin);
     padding: 10px;
 }
 
@@ -81,7 +90,7 @@ label {
     border-width: 2px;
     background-color: gray;
     color: white;
-    font-size: 25px;
+    font-size: calc(10px + 2vmin);
     padding: 10px;
 }
 
@@ -103,20 +112,97 @@ label {
 }
 
 .characterTable {
-    margin-top: calc(60px + 2vmin);
+    margin-top: calc(80px + 2vmin);
     background-color: #121212;
     border-radius: 10px;
     border-collapse: separate;
     border-spacing: 0 5px;
-    padding-left: 15px;
-    width: 80%;
+    width: 95%;
+    max-width: 100vh;
 }
 
+.characterDetailsTable {
+    margin-top: calc(10px + 2vmin);
+    background-color: #1f1f1f;
+    display: grid;
+    column-gap: 1vw;
+    grid-template-columns: auto auto;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 80vh;
+    padding: 30px;
+}
+
+.characterName {
+    margin-top: calc(80px + 2vmin);
+    font-size: calc(60px + 2vmin);
+    font-weight: 300;
+}
+
+.characterDetails {
+    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.characterDetailsTable img.characterIcon {
+    width: calc(200px + 2vmin);
+    max-width: 100vh;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .characterDetailsTable {
+        max-width: 80vw;
+    }
+
+    .characterName {
+        margin-top: calc(80px + 2vmin);
+        font-size: calc(35px + 2vmin);
+        font-weight: 300;
+    }
+
+    .characterDetailsTable img.characterIcon {
+        width: calc(128px + 2vmin);
+        height: calc(128px + 2vmin);
+    }
+
+    .characterDetails img.pathIcon {
+        width: calc(40px + 2vmin);
+    }
+
+    .characterDetails img.elementIcon {
+        width: calc(40px + 2vmin);
+    }
+}
+
+.characterDetailsTable img.pathIcon {
+    max-width: calc(60px + 2vmin);
+    margin-right: 20px;
+}
+
+.characterDetails div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.characterDetails img.elementIcon {
+    max-width: calc(60px + 2vmin);
+    margin-right: 20px;
+}
+
+
 td {
-    padding-left: 15px;
+    padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: 250;
+}
+
+td.elementTD {
+    padding-right: 5px;
 }
 
 th {
@@ -128,18 +214,72 @@ th {
 }
 
 th.Name {
-    width: 40%;
-}
-
-th.Path {
-    width: 30%;
-}
-
-th.Element {
     width: 25%;
 }
 
-tbody tr{
+th.Path {
+    width: 25%;
+}
+
+th.Element {
+    width: 20%;
+}
+
+th.CharacterIcon {
+    width: 10%;
+}
+
+th.PathIcon {
+    width: 10%;
+}
+
+th.ElementIcon {
+    width: 10%;
+}
+
+@media only screen and (max-width: 800px) {
+    th.Name {
+        width: 25%;
+    }
+
+    td.Path {
+        width: 0%;
+        display: none;
+    }
+
+    td.Element {
+        width: 0%;
+        display: none;
+    }
+
+    th.CharacterIcon {
+        width: 25%;
+    }
+
+    th.Path {
+        width: 20%;
+    }
+
+    th.Element {
+        width: 20%;
+    }
+
+    th.CharacterIcon {
+        width: 25%;
+    }
+
+    th.PathIcon {
+        width: 0%;
+        display: none;
+    }
+
+    th.ElementIcon {
+        width: 0%;
+        display: none;
+    }
+}
+
+tbody tr {
     background-color: #1e1e1e;
     color: white;
     border: solid thin round #121212;
@@ -175,7 +315,7 @@ tbody tr:hover {
     color: black;
 }
 
-.currentWebsite{
+.currentWebsite {
     background-color: #121212;
     align-self: center;
     flex: 1;
@@ -189,4 +329,35 @@ tbody tr:hover {
 .currentWebsite :hover {
     background: #ddd;
     color: black;
+}
+
+.form label {
+    font-size: calc(15px + 2vmin);
+}
+
+.formOptions p {
+    font-size: calc(15px + 2vmin);
+}
+
+.formOptions .path label {
+    font-size: calc(10px + 2vmin);
+}
+
+.formOptions .element label {
+    font-size: calc(10px + 2vmin);
+}
+
+img.characterIcon {
+    height: calc(95%);
+    width: calc(95%);
+}
+
+img.pathIcon {
+    height: calc(95%);
+    width: calc(95%);
+}
+
+img.elementIcon {
+    height: calc(95%);
+    width: calc(95%);
 }
